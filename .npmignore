@@ -7,12 +7,16 @@ pnpm-lock.yaml
 # Test files
 __test__/
 
+# Example directories
+examples/
+
 # Source files
 src/
 
 # Miscellaneous project files
-.github
-.husky
+.changeset/
+.github/
+.husky/
 .eslintrc
 .lintstagedrc.json
 .prettierignore
