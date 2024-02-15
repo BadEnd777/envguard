@@ -53,8 +53,7 @@ Throws an Error if:
     ```typescript
     const env = guardEnv(process.env, {});
 
-    console.log(env);
-    // Error: Configuration is empty
+    console.log(env); // Error: Configuration is empty
     ```
 
 -   A variable is not defined in the environment.
@@ -70,8 +69,7 @@ Throws an Error if:
     };
     const env = guardEnv(process.env, config);
 
-    console.log(env.ENABLED);
-    // Error: 'ENABLED' is not defined in 'guard-env' config
+    console.log(env.ENABLED); // Error: 'ENABLED' is not defined in environment variables
     ```
 
 -   An unsupported type is specified in the configuration.
@@ -89,10 +87,8 @@ Throws an Error if:
     };
     const env = guardEnv(process.env, config);
 
-    console.log(env.PORT);
-    // TypeError: 'PORT' is not of type number
-    console.log(env.ENABLED);
-    // TypeError: 'ENABLED' is not of type boolean
+    console.log(env.PORT); // TypeError: 'PORT' is not of type number
+    console.log(env.ENABLED); // TypeError: 'ENABLED' is not of type boolean
     ```
 
 -   An unsupported type is specified in the configuration.
@@ -103,8 +99,7 @@ Throws an Error if:
     };
     const env = guardEnv(process.env, config);
 
-    console.log(env.DATE);
-    // Error: 'Date' type is not supported
+    console.log(env.DATE); // Error: 'Date' type is not supported
     ```
 
 ## Examples
