@@ -19,10 +19,10 @@
     "scripts": {
         "build": "tsup src/index.ts --format cjs,esm --dts",
         "format:fix": "prettier --write . --list-different",
-        "test": "jest --clearCache && jest --detectOpenHandles",
         "lint": "eslint . --ext .ts",
         "prepare": "husky",
         "release": "pnpm build && changeset publish",
+        "test": "jest --clearCache && jest --detectOpenHandles",
         "unimported": "unimported"
     },
     "devDependencies": {
