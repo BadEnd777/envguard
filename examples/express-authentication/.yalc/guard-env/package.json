@@ -1,0 +1,29 @@
+{
+    "name": "guard-env",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BadEnd777/guard-env.git"
+    },
+    "bugs": {
+        "url": "https:/github.com/BadEnd777/guard-env/issues"
+    },
+    "author": {
+        "name": "BadEnd777",
+        "email": "badend777@proton.me"
+    },
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "format:fix": "prettier --write . --list-different",
+        "jest:report": "pnpm jest:test --coverage --coverageReporters=text-summary",
+        "jest:test": "pnpm build && jest --clearCache && jest --detectOpenHandles",
+        "lint": "eslint . --ext .ts",
+        "release": "pnpm build && changeset publish",
+        "unimported": "unimported"
+    },
+    "yalcSig": "fa09155451c68397e346b8eb2074e564"
+}

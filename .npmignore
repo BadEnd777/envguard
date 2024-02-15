@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Dependency directories
+pnpm-lock.yaml
+
+# Test files
+__test__/
+
+# Source files
+src/
+
+# Miscellaneous project files
+.github
+.husky
+.eslintrc
+.lintstagedrc.json
+.prettierignore
+.prettierrc
+.unimportedrc.json
+jest.config.ts
+tsconfig.json

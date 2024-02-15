@@ -107,9 +107,9 @@ Throws an Error if:
     // Error: 'Date' type is not supported
     ```
 
-## Examples
+<!-- ## Examples
 
-Check out the [examples](examples) directory for more usage examples.
+Check out the examples directory for more usage examples. -->
 
 ## License
 
