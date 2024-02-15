@@ -26,4 +26,4 @@ jobs:
       - name: 🏗️ Build
         run: pnpm build
       - name: 🧪 Test
-        run: pnpm jest:test
+        run: pnpm test

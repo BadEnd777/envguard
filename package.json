@@ -1,5 +1,5 @@
 {
-    "name": "guard-env",
+    "name": "@badend777/guard-env",
     "version": "0.0.1",
     "repository": {
         "type": "git",
@@ -19,8 +19,7 @@
     "scripts": {
         "build": "tsup src/index.ts --format cjs,esm --dts",
         "format:fix": "prettier --write . --list-different",
-        "jest:report": "pnpm jest:test --coverage --coverageReporters=text-summary",
-        "jest:test": "pnpm build && jest --clearCache && jest --detectOpenHandles",
+        "test": "jest --clearCache && jest --detectOpenHandles",
         "lint": "eslint . --ext .ts",
         "prepare": "husky",
         "release": "pnpm build && changeset publish",
