@@ -1,4 +1,4 @@
-import { guardEnv } from '../src/index';
+import { guardEnv } from '../dist/index';
 
 describe('guardEnv', () => {
     beforeEach(() => {
@@ -54,8 +54,6 @@ describe('guardEnv', () => {
 
         const config = guardEnv(process.env, {
             NUMBER_VARIABLE: Number,
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
             BOOLEAN_VARIABLE: Boolean
         });
 

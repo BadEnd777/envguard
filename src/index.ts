@@ -7,29 +7,15 @@ type GuardType<T> = (value: string) => T;
 /**
  * Guards the environment variables based on the provided configuration and returns a proxy object with type-checked values.
  * @param env - The Node.js process environment variables.
- * @param setConfig - The configuration object specifying the expected types for each environment variable.
- * @returns A proxy object with type-checked values.
- * @throws Error if the configuration is empty or if a variable is not defined in the environment.
- * @throws TypeError if a variable is not of the expected type (number, boolean, or string).
+ * @param setConfig - The configuration object that defines the expected types for each environment variable.
+ * @returns A proxy object with type-checked values based on the configuration.
+ * @throws Error if the configuration is empty or if a required environment variable is not defined.
+ * @throws TypeError if an environment variable is not of the expected type (number, boolean, or string).
  * @throws Error if an unsupported type is specified in the configuration.
- * @example
- * ```ts
- * const env = guardEnv(process.env, {
- *      PORT: Number,
- *      ENABLED: Boolean,
- *      API_KEY: String
- * });
- *
- * console.log(env.PORT); // 3000
- * console.log(env.ENABLED); // true
- * console.log(env.API_KEY); // 'secret
- *
- * console.log(env.NON_EXISTENT); // Error: 'NON_EXISTENT' is not defined in 'guard-env' config
- * ```
  */
-export const guardEnv = <T extends string | number | boolean>(
+export const guardEnv = (
     env: NodeJS.ProcessEnv,
-    setConfig: { [key: string]: GuardType<T> }
+    setConfig: { [key: string]: GuardType<string | number | boolean> }
 ): EnvConfig => {
     const config: EnvConfig = {};
 

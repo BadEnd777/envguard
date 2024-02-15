@@ -29,7 +29,7 @@
         "format:fix": "prettier --write . --list-different",
         "lint": "eslint . --ext .ts",
         "prepare": "husky",
-        "prepublish": "pnpm build && pnpm test && changeset add && changeset version && pnpm format:fix",
+        "prerelease": "pnpm build && pnpm test && changeset add && changeset version && pnpm format:fix",
         "release": "pnpm build && changeset publish",
         "test": "jest --clearCache && jest --detectOpenHandles",
         "unimported": "unimported"
