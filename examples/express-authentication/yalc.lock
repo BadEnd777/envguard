@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "guard-env": {
-      "signature": "e1f4b46375266c8f313d397f7228ae79",
-      "file": true
-    }
-  }
-}

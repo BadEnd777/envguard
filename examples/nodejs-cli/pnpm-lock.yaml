@@ -1,0 +1,40 @@
+lockfileVersion: '6.0'
+
+settings:
+    autoInstallPeers: true
+    excludeLinksFromLockfile: false
+
+dependencies:
+    commander:
+        specifier: ^12.0.0
+        version: 12.0.0
+    dotenv:
+        specifier: ^16.4.4
+        version: 16.4.4
+    guard-env:
+        specifier: ^0.0.2
+        version: 0.0.2
+
+packages:
+    /commander@12.0.0:
+        resolution:
+            {
+                integrity: sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==
+            }
+        engines: { node: '>=18' }
+        dev: false
+
+    /dotenv@16.4.4:
+        resolution:
+            {
+                integrity: sha512-XvPXc8XAQThSjAbY6cQ/9PcBXmFoWuw1sQ3b8HqUCR6ziGXjkTi//kB9SWa2UwqlgdAIuRqAa/9hVljzPehbYg==
+            }
+        engines: { node: '>=12' }
+        dev: false
+
+    /guard-env@0.0.2:
+        resolution:
+            {
+                integrity: sha512-7QcQodnVTx21D+LV6icm8DFcwrrjmOuxHx1uSTAQ311x2L2vjnmL0wCCL79DQUSv90qm2ezREVjhECVAIxdJNg==
+            }
+        dev: false
